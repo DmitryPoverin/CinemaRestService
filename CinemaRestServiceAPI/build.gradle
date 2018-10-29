@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group '2gis.test'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.16'
+    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.16'
+    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-jetty-http', version: '2.16'
+
+    // https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-moxy
+    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.16'
+
+    // https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json-jackson
+    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.16'
+
+    // https://mvnrepository.com/artifact/com.sun.jersey/jersey-json
+    compile group: 'com.sun.jersey', name: 'jersey-json', version: '1.19.4'
+
+    // https://mvnrepository.com/artifact/org.glassfish.jersey/jersey-bom
+    compile group: 'org.glassfish.jersey', name: 'jersey-bom', version: '2.16', ext: 'pom'
+    compile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.16'
+    compile group: 'org.eclipse.jetty.aggregate', name: 'jetty-all', version: '9.3.0.M1'
+
+
+}
